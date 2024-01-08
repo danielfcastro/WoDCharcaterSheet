@@ -243,7 +243,7 @@
 }
 
 
-\newcommand{\OtherTraits}[8]{%
+\newcommand{\OtherTraits}[7]{%
 	\noindent
 \begin{center}
 	\vspace{-1.0\baselineskip}
@@ -256,21 +256,8 @@
 		\makebox[4.7em][l]{#5} & \dottedSkill{1}{10}\\
 		\makebox[4.7em][l]{#6} & \dottedSkill{1}{10}\\
 		\makebox[4.7em][l]{#7} & \dottedSkill{1}{10}\\
-		\makebox[4.7em][l]{#8} & \dottedSkill{1}{10}\\
-		%\ComplOtherTraits{#9}{;}
 	\end{tabular}%
 \end{center}
-}
-
-\NewDocumentCommand{\ComplOtherTraits}{ >{\SplitList{|}} m }{%
-	\setcounter{traitCounter}{0}
-	\ProcessList{#1}{\traitEntry}%
-}
-
-\NewDocumentCommand{\traitEntry}{m}{%
-	\makebox[4.7em][l]{#1} & \dottedSkill{1}{10}%
-	\ifnumcomp{\value{traitCounter}}{<}{\ListLength}{\\}{}
-	\stepcounter{traitCounter}
 }
 
 \newcommand{\NewdottedSkill}[2]{%
