@@ -1,0 +1,133 @@
+\documentclass[HQ,english,Vampire]{VampireSheet}
+\usepackage{ragged2e}
+\usepackage{wasysym}
+\newcounter{squarecount}
+\newcounter{traitCounter}
+% Defina sua imagem de fundo aqui
+
+\backgroundsetup{
+	scale=1,
+	angle=0,
+	opacity=1,
+	color=black,
+	contents={%
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[inner sep=0] at (current page.center)
+			{\includegraphics[width=\paperwidth, height=\paperheight]{../art/backgrounds/\genrePath/BG\isLQ}};
+		\end{tikzpicture}
+	}
+}
+\begin{document}
+	\RaggedRight
+	\begin{center}
+		\begin{minipage}[t]{0.33333\textwidth}
+			\raggedright
+			\PlayerCharGameInfo{Name}{Player}{Chronicle}
+		\end{minipage}%
+		\begin{minipage}[t]{0.33333\textwidth}
+			\raggedright
+			\PlayerCharGameInfo{Nature}{Demeanor}{Concept}
+		\end{minipage}%
+		\begin{minipage}[t]{0.33333\textwidth}
+			\raggedright
+			\PlayerCharGameInfo{Clan}{Generation}{Sire}
+		\end{minipage}
+	\end{center}
+	\vspace{-2.5\baselineskip}
+	\BigWoDSeperatorSheet{Attributes}
+	\begin{center}
+		\vspace{-0.5\baselineskip}
+		\begin{minipage}[b]{0.33333\textwidth}
+			\raggedright
+			\centerline{Physical}\par
+			\Attributes{Strength}{Dexterity}{Stamina}
+		\end{minipage}%
+		\begin{minipage}[b]{0.33333\textwidth}
+			\centering
+			\centerline{Social}\par
+			\Attributes{Charisma}{Manipulation}{Appearance}
+		\end{minipage}%
+		\begin{minipage}[b]{0.33333\textwidth}
+			\raggedleft
+			\centerline{Mental}\par
+			\Attributes{Perception}{Intelligence}{Wits}
+		\end{minipage}
+	\end{center}
+	\vspace{-2.5\baselineskip}
+	\BigWoDSeperatorSheet{Abilities}
+	\begin{center}
+		\vspace{-0.5\baselineskip}
+		\begin{minipage}[t]{0.33333\textwidth}
+			\raggedright
+			\centerline{Talents}\par
+			\Abilities{Alertness}{Athletics}{Awarness}{Brawl}{Empathy}{Expression}{Intimidation}{Leadership}{Legendermain|Subterfuge}
+		\end{minipage}%
+		\begin{minipage}[t]{0.33333\textwidth}
+			\centering
+			\centerline{Skills}\par
+			\Abilities{Animal Ken}{Archery}{Commerce}{Crafts}{Etiquette}{Melee}{Performance}{Ride}{Stealth|Survival}
+		\end{minipage}%
+		\begin{minipage}[t]{0.33333\textwidth}
+			\raggedleft
+			\centerline{Knowledge}\par
+			\Abilities{Academics}{Hearth Wisdom}{Investigation}{Law}{Linguistics}{Medicine}{Ocult}{Politics}{Seneschal|Science}
+		\end{minipage}
+	\end{center}
+	\vspace{-2.5\baselineskip}
+	\BigWoDSeperatorSheet{Advantages}
+	\begin{center}
+		\vspace{-0.5\baselineskip}
+		\begin{minipage}[t]{0.33333\textwidth}
+			\raggedright
+			\centerline{Discipline}\par
+			\Disciplines{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+		\end{minipage}%
+		\begin{minipage}[t]{0.33333\textwidth}
+			\centering
+			\centerline{Background}\par
+			\Backgrounds{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+		\end{minipage}%
+		\begin{minipage}[t]{0.33333\textwidth}
+			\raggedleft
+			\centerline{Virtues}\par
+			\Virtues{Conscience/Conviction}{Self-Control/Instinct}{Courage}
+		\end{minipage}
+	\end{center}
+	%\vspace{-2.5\baselineskip}
+	\BigWoDSeperatorSheetNonText{}
+	\begin{center}
+		\vspace{-0.5\baselineskip}
+		\begin{minipage}[t]{0.33333\textwidth}
+			\raggedright
+			\SmallWoDSeperatorSheet{Other Traits}\par
+			\OtherTraits
+			{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+			{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+			{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+			{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+			{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+			{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+			{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+			{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+			%{AAA;BBB;CCC}
+			%{\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_|\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_|\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_|\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_|\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_|\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_\kern-.14ex\_}
+		\end{minipage}%
+		\begin{minipage}[t]{0.33333\textwidth}
+			\centering
+			\SmallWoDSeperatorSheet{Path}\par
+			\Humanity{Humanity}\par
+			\SmallWoDSeperatorSheet{Willpower}\par
+			\Willpower\par
+			\SmallWoDSeperatorSheet{Bloodpool}\par
+			\Bloodpool{40}
+		\end{minipage}%
+		\begin{minipage}[t]{0.33333\textwidth}
+			\raggedleft
+			\SmallWoDSeperatorSheet{Health}\par
+			\Healthlevel\par
+			\vspace{-1.15\baselineskip}
+			\SmallWoDSeperatorSheet{Experience}\par
+			\experience
+		\end{minipage}
+	\end{center}
+\end{document}
