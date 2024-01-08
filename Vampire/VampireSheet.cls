@@ -235,9 +235,9 @@
 		\vspace{-1.0\baselineskip}
 		\setlength{\tabcolsep}{10pt}
 		\begin{tabular}{ll}
-			\makebox[7.6em][l]{#1} & \dottedSkill{1}{5}\\[11.5pt]
-			\makebox[7.6em][l]{#2} & \dottedSkill{1}{5}\\[11.5pt]
-			\makebox[7.6em][l]{#3} & \dottedSkill{1}{5}\\[11.5pt]
+			\makebox[8.2em][l]{#1} & \dottedSkill{1}{5}\\[11.5pt]
+			\makebox[8.2em][l]{#2} & \dottedSkill{1}{5}\\[11.5pt]
+			\makebox[8.2em][l]{#3} & \dottedSkill{1}{5}\\[11.5pt]
 		\end{tabular}%
 	\end{center}
 }
